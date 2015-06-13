@@ -8,14 +8,14 @@ allEntries.fetch().done(function(){
 
   // Hover Styling on Properties Menu
 
-$('.fa-cog').on('mouseenter', function(){
-  $(this).toggleClass('fa-spin');
-  $(this).parent().toggleClass('menuhover');
+$('.menu').on('mouseenter', function(){
+  $(this).find('.fa-cog').toggleClass('fa-spin');
+  $(this).toggleClass('menuhover');
 });
 
-$('.fa-cog').on('mouseleave', function(){
-  $(this).toggleClass('fa-spin');
-  $(this).parent().toggleClass('menuhover');
+$('.menu').on('mouseleave', function(){
+  $(this).find('.fa-cog').toggleClass('fa-spin');
+  $(this).toggleClass('menuhover');
 });
 
 

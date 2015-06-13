@@ -77,21 +77,27 @@ body {
   text-align: right;
   padding-top: 30px;
   padding-right: 10px;
-  position: relative; }
+  position: relative;
+  border-left: #005E7F solid 1px; }
 
 .menuhover {
-  height: 80px;
-  transition: all 2s ease;
-  border-left: #005E7F solid 1px; }
+  height: 85px;
+  transition: all 500ms ease; }
 
 .fa-pencil {
   color: #005E7F;
   display: block;
   padding-right: 3px;
-  padding-top: 7px; }
+  margin-top: 7px; }
 
 .fa-trash-o {
   color: #005E7F;
   display: block;
   padding-right: 4px;
-  padding-top: 10px; }
+  margin-top: 10px; }
+
+.options {
+  margin-left: 3px; }
+
+.options:hover {
+  border: 1px solid #00527F; }
