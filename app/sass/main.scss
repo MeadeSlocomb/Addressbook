@@ -4,12 +4,27 @@
 
 
 body {
-  background-color: #00A4FF;
+  background-color: #BDD9FD;
 }
 
 .container {
   text-align: center;
   margin-top: 25px;
+}
+
+.inputForm {
+  width: 30%;
+  margin: 30px auto;
+  padding: 15px 0;
+  color: #005E7F;
+  background-color: #C7EBFF;
+  border: 1px solid #00527F;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.input {
+  display: block;
 }
 
 .entry {
@@ -24,7 +39,7 @@ body {
 }
 
 .head {
-  width: 45%;
+  width: 47.5%;
   height: 80%;
   padding-left: 25px;
   padding-top: 15px;
@@ -41,7 +56,7 @@ body {
 }
 
 .infoList {
-  width: 45%;
+  width: 47.5%;
   list-style-type: none;
   margin-top: 13px;
   // padding-left: 20px;
@@ -58,7 +73,7 @@ body {
 }
 
 .menu {
-  width: 10%;
+  width: 5%;
   // border-left: 1px #005E7F solid;
   height: 28px;
   overflow: hidden;
@@ -72,13 +87,16 @@ body {
 
 .menuhover {
   height: 80px;
+  transition: all 2s ease;
+  border-left: #005E7F solid 1px;
+
 }
 
 .fa-pencil {
   color: #005E7F;
   display: block;
   padding-right: 3px;
-  padding-top: 5px;
+  padding-top: 7px;
 
 }
 
