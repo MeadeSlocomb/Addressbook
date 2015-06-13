@@ -13,7 +13,7 @@ body {
 }
 
 .inputForm {
-  width: 30%;
+  width: 20%;
   margin: 30px auto;
   padding: 15px 0;
   color: #005E7F;
@@ -24,7 +24,16 @@ body {
 }
 
 .input {
+  height: 30px;
+  width: 75%;
   display: block;
+  margin: 5px auto;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  height: 30px;
+  width: 150px;
 }
 
 .entry {
@@ -38,7 +47,7 @@ body {
   margin: 10px auto;
 }
 
-.head {
+.entryHeader {
   width: 47.5%;
   height: 80%;
   padding-left: 25px;

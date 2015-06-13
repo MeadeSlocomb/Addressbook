@@ -52,7 +52,7 @@ var addEntry = function(e){
 var addEntryToView = function(entry){
 
   var entryHTML = "<li class='entry' id='" + entry._id + "'>";
-      entryHTML +=  "<div class='head'>";
+      entryHTML +=  "<div class='entryHeader'>";
       entryHTML +=    "<span class='name'>" + entry.lastName + ", " + entry.firstName + "</span>";
       entryHTML +=  "</div>";
       entryHTML +=  "<ul class='infoList'>";
