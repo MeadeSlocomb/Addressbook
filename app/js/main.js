@@ -39,12 +39,16 @@ var addEntry = function(e){
 
 var addEntryToView = function(entry){
 
-  var entryHTML = "<li id='" + entry._id + "'>";
-      entryHTML += "<span class='name'>" + entry.lastName + " " + entry.firstName + "</span>";
-      entryHTML += "<span class='email'>" + entry.email + "</span>";
-      entryHTML += "<span class='phone'>" + entry.phoneNumber + "</span>";
-      entryHTML += "<span class='twitter'>" + entry.twitter + "</span>";
-      entryHTML += "<span class='linkedIn'>" + entry.linkedIn + "</span>";
+  var entryHTML = "<li class='entry' id='" + entry._id + "'>";
+      entryHTML += "<div class='head'>";
+      entryHTML += "<span class='name'>" + entry.lastName + ", " + entry.firstName + "</span>";
+      entryHTML += "</div>";
+      entryHTML += "<ul class='infoList'>";
+      entryHTML +=  "<li class='email'>" + entry.email + "</span>";
+      entryHTML +=  "<li class='phone'>" + entry.phoneNumber + "</span>";
+      entryHTML +=  "<li class='twitter'>" + entry.twitter + "</span>";
+      entryHTML +=  "<li class='linkedIn'>" + entry.linkedIn + "</span>";
+      entryHTML += "</ul>";
       entryHTML += "</li>";
 
   $('#addressBook').prepend(entryHTML);
