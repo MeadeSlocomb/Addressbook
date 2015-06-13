@@ -5,7 +5,6 @@
 
 body {
   background-color: #00A4FF;
-
 }
 
 .container {
@@ -25,7 +24,7 @@ body {
 }
 
 .head {
-  width: 50%;
+  width: 45%;
   height: 80%;
   padding-left: 25px;
   padding-top: 15px;
@@ -42,7 +41,7 @@ body {
 }
 
 .infoList {
-  width: 50%;
+  width: 45%;
   list-style-type: none;
   margin-top: 13px;
   // padding-left: 20px;
@@ -50,18 +49,45 @@ body {
   text-align: left;
 }
 
-.email {
+.fa-cog {
+  color: #005E7F;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.menu {
+  width: 10%;
+  // border-left: 1px #005E7F solid;
+  height: 28px;
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.menuhover {
+  height: 80px;
+}
+
+.fa-pencil {
+  color: #005E7F;
+  display: block;
+  padding-right: 3px;
+  padding-top: 5px;
 
 }
 
-.phoneNumber {
+.fa-trash-o {
+  color: #005E7F;
+  display: block;
+  padding-right: 4px;
+  padding-top: 10px;
 
 }
 
-.twitter {
 
-}
-
-.linkedIn {
-
-}

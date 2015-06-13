@@ -6,6 +6,18 @@ allEntries.fetch().done(function(){
     addEntryToView(model.attributes);
   });
 
+  // Hover Styling on Properties Menu
+
+$('.fa-cog').on('mouseenter', function(){
+  $(this).toggleClass('fa-spin');
+  $(this).parent().toggleClass('menuhover');
+});
+
+$('.fa-cog').on('mouseleave', function(){
+  $(this).toggleClass('fa-spin');
+  $(this).parent().toggleClass('menuhover');
+});
+
 
 });
 
@@ -40,21 +52,29 @@ var addEntry = function(e){
 var addEntryToView = function(entry){
 
   var entryHTML = "<li class='entry' id='" + entry._id + "'>";
-      entryHTML += "<div class='head'>";
-      entryHTML += "<span class='name'>" + entry.lastName + ", " + entry.firstName + "</span>";
-      entryHTML += "</div>";
-      entryHTML += "<ul class='infoList'>";
-      entryHTML +=  "<li class='email'>" + entry.email + "</span>";
-      entryHTML +=  "<li class='phone'>" + entry.phoneNumber + "</span>";
-      entryHTML +=  "<li class='twitter'>" + entry.twitter + "</span>";
-      entryHTML +=  "<li class='linkedIn'>" + entry.linkedIn + "</span>";
-      entryHTML += "</ul>";
+      entryHTML +=  "<div class='head'>";
+      entryHTML +=    "<span class='name'>" + entry.lastName + ", " + entry.firstName + "</span>";
+      entryHTML +=  "</div>";
+      entryHTML +=  "<ul class='infoList'>";
+      entryHTML +=    "<li class='email'>" + entry.email + "</span>";
+      entryHTML +=    "<li class='phone'>" + entry.phoneNumber + "</span>";
+      entryHTML +=    "<li class='twitter'>" + entry.twitter + "</span>";
+      entryHTML +=    "<li class='linkedIn'>" + entry.linkedIn + "</span>";
+      entryHTML +=  "</ul>";
+      entryHTML +=  "<div class='menu'>";
+      entryHTML +=    "<i class='fa fa-cog fa-lg'></i>";
+      entryHTML +=    "<i class='options fa fa-pencil'></i>";
+      entryHTML +=    "<i class='options fa fa-trash-o'></i>";
+      entryHTML +=  "</div>";
       entryHTML += "</li>";
 
   $('#addressBook').prepend(entryHTML);
 };
 
 
-//Submit New Address Listener
+// Submit New Address Listener
 
 $('#addEntry').on('submit', addEntry);
+
+
+

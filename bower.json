@@ -20,7 +20,8 @@
     "underscore": "~1.8.3",
     "normalize.css": "~3.0.3",
     "handlebars": "~3.0.3",
-    "backbone": "~1.2.1"
+    "backbone": "~1.2.1",
+    "font-awesome": "~4.3.0"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
