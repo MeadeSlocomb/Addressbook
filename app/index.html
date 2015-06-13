@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div>
+      <form id="addEntry">
+        <input id="firstName" type="text" placeholder="First Name"/>
+        <input id="lastName" type="text" placeholder="Last Name"/>
+        <input id="email" type="text" placeholder="Email"/>
+        <input id="pNumber" type="text" placeholder="Phone Number"/>
+        <input id="twitter" type="text" placeholder="Twitter"/>
+        <input id="linkedIn" type="text" placeholder="LinkedIn"/>
+        <button>Add Entry</button>
+      </form>
+    </div>
+
+    <ul id="addressBook"></ul>
+
+  </div>
+
+  <!-- VENDOR -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/underscore.js"></script>
+   <script src="js/vendor/backbone.js"></script>
+  <script src="js/vendor/handlebars.js"></script>
+  <!-- TEMPLATES -->
+  <script src="js/templates.js"></script>
+  <!-- MAIN -->
+  <script src="js/models/entry.model.js"></script>
+  <script src="js/collections/entry.collection.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
