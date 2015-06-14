@@ -22,7 +22,10 @@ body {
   height: 30px;
   width: 75%;
   display: block;
-  margin: 5px auto; }
+  margin: 5px auto;
+  border: 1px solid #00527F;
+  border-radius: 5px;
+  padding: 3px; }
 
 .submitBtn {
   margin-top: 10px;
