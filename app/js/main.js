@@ -31,40 +31,10 @@ var addEntryToView = function(entry){
       entryHTML +=  "</div>";
       entryHTML += "</li>";
 
+
   $('#addressBook').append(entryHTML);
 
 
-
-// Hover Styling on Properties Menu
-
-  $('.menu').on('mouseenter', function(e){
-    $(this).find('.fa-cog').toggleClass('fa-spin');
-    $(this).toggleClass('menuhover');
-  });
-
-  $('.menu').on('mouseleave', function(e){
-    $(this).find('.fa-cog').toggleClass('fa-spin');
-    $(this).toggleClass('menuhover');
-  });
-
-
-
-// Delete Button
-
-  $('.entry').on('click', '.fa-trash-o', function(e){
-
-    e.preventDefault();
-
-    var idToDelete = $(this).parent().parent().attr('id');
-    var contactToDelete = $(this).parent().parent();
-
-    $.ajax({
-      url: url + idToDelete,
-      type: 'DELETE'
-    }).done( function () {
-    contactToDelete.fadeOut();
-    });
-  });
 };
 
 
@@ -118,12 +88,36 @@ allEntries.fetch().done(function(){
   });
 
 
+// Hover Styling on Properties Menu
+
+  $('.menu').on('mouseenter', function(){
+    console.log($(this));
+    $(this).find('.fa-cog').toggleClass('fa-spin');
+    $(this).toggleClass('menuhover');
+  });
+
+  $('.menu').on('mouseleave', function(){
+    $(this).find('.fa-cog').toggleClass('fa-spin');
+    $(this).toggleClass('menuhover');
+  });
+
+// Delete Button (Trash can icon in hover menu)
+
+  $('.entry').on('click', '.fa-trash-o', function(e){
+
+    e.preventDefault();
+
+    var idToDelete = $(this).parent().parent().attr('id');
+    var contactToDelete = $(this).parent().parent();
+
+    $.ajax({
+      url: url + idToDelete,
+      type: 'DELETE'
+    }).done( function () {
+    contactToDelete.fadeOut();
+    });
+  });
 });
-
-
-
-
-
 
 
 
