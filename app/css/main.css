@@ -16,7 +16,8 @@ body {
   background-color: #fff;
   border: 1px solid #00527F;
   border-radius: 5px;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 5px 5px 10px black; }
 
 .input {
   height: 30px;
@@ -44,12 +45,13 @@ body {
   color: #005E7F;
   border: 1px solid #00527F;
   border-radius: 5px;
-  width: 45%;
-  height: 100px;
-  margin: 10px auto; }
+  width: 50%;
+  height: 125px;
+  margin: 30px auto;
+  box-shadow: 5px 5px 10px black; }
 
 .entryHeader {
-  width: 47.5%;
+  width: 50%;
   height: 80%;
   padding-left: 25px;
   padding-top: 15px;
@@ -64,11 +66,22 @@ body {
   padding: 5px; }
 
 .infoList {
-  width: 47.5%;
+  width: 45%;
   list-style-type: none;
   margin-top: 13px;
   display: inline-block;
   text-align: left; }
+
+.icon {
+  display: inline-block;
+  width: 10%;
+  margin-bottom: 7px; }
+
+.info {
+  display: inline-block;
+  width: 90%;
+  font-weight: bold;
+  margin-bottom: 7px; }
 
 .fa-cog {
   color: #005E7F;

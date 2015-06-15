@@ -20,10 +20,14 @@ var addEntryToView = function(entry){
       entryHTML +=    "<span class='name'>" + entry.lastName + ", " + entry.firstName + "</span>";
       entryHTML +=  "</div>";
       entryHTML +=  "<ul class='infoList'>";
-      entryHTML +=    "<li class='email'>" + entry.email + "</li>";
-      entryHTML +=    "<li class='phone'>" + entry.phoneNumber + "</li>";
-      entryHTML +=    "<li class='twitter'>" + entry.twitter + "</li>";
-      entryHTML +=    "<li class='linkedIn'>" + entry.linkedIn + "</li>";
+      entryHTML +=    "<i class='icon fa fa-envelope-o'></i>";
+      entryHTML +=    "<li class='info email'>" + entry.email + "</li>";
+      entryHTML +=    "<i class='icon fa fa-phone'></i>";
+      entryHTML +=    "<li class='info phone'>" + entry.phoneNumber + "</li>";
+      entryHTML +=    "<i class='icon fa fa-twitter'></i>";
+      entryHTML +=    "<li class='info twitter'>" + entry.twitter + "</li>";
+      entryHTML +=    "<i class='icon fa fa-linkedin'></i>";
+      entryHTML +=    "<li class='info linkedIn'>" + entry.linkedIn + "</li>";
       entryHTML +=  "</ul>";
       entryHTML +=  "<div class='menu'>";
       entryHTML +=    "<i class='fa fa-cog fa-lg'></i>";
