@@ -7,6 +7,7 @@
 // Needed Variables
 
 var url = 'http://tiy-515.herokuapp.com/collections/meade-addressbook/';
+var idToEdit;
 
 
 
@@ -31,7 +32,6 @@ var addEntryToView = function(entry){
       entryHTML +=  "</div>";
       entryHTML += "</li>";
 
-
   $('#addressBook').append(entryHTML);
 
 
@@ -45,12 +45,12 @@ var addEntry = function(e){
 
   e.preventDefault();
 
-  var entryFirstName = $(this).find('#firstName').val();
-  var entryLastName = $(this).find('#lastName').val();
-  var entryEmail = $(this).find('#email').val();
-  var entryPhoneNumber = $(this).find('#pNumber').val();
-  var entryTwitter = $(this).find('#twitter').val();
-  var entryLinkedIn = $(this).find('#linkedIn').val();
+  var entryFirstName = $('#firstName').val();
+  var entryLastName = $('#lastName').val();
+  var entryEmail = $('#email').val();
+  var entryPhoneNumber = $('#pNumber').val();
+  var entryTwitter = $('#twitter').val();
+  var entryLinkedIn = $('#linkedIn').val();
 
   var entry = new Entry({
     firstName: entryFirstName,
@@ -65,7 +65,42 @@ var addEntry = function(e){
     addEntryToView(data);
   });
 
-  this.reset();
+  $('#addEntry')[0].reset();
+
+};
+
+
+//Pulls values from HTML input and defines new instance using Backbone model
+
+var editEntry = function(e){
+
+  e.preventDefault();
+
+  var entryFirstName = $('#firstName').val();
+  var entryLastName = $('#lastName').val();
+  var entryEmail = $('#email').val();
+  var entryPhoneNumber = $('#pNumber').val();
+  var entryTwitter = $('#twitter').val();
+  var entryLinkedIn = $('#linkedIn').val();
+
+  var contact = allEntries.get(idToEdit);
+
+  contact.save(
+    {
+      firstName: entryFirstName,
+      lastName: entryLastName,
+      email: entryEmail,
+      phoneNumber: entryPhoneNumber,
+      twitter: entryTwitter,
+      linkedIn: entryLinkedIn
+    },
+    {
+      dataType: "text",
+      success: function() {
+        console.log("I am actually saving.");
+        document.location.reload();
+      }
+    });
 
 };
 
@@ -73,7 +108,7 @@ var addEntry = function(e){
 
 // Submit New Address Listener
 
-$('#addEntry').on('submit', addEntry);
+$('#addEntry').on('click', '#submitBtn', addEntry);
 
 
 
@@ -91,7 +126,6 @@ allEntries.fetch().done(function(){
 // Hover Styling on Properties Menu
 
   $('.menu').on('mouseenter', function(){
-    console.log($(this));
     $(this).find('.fa-cog').toggleClass('fa-spin');
     $(this).toggleClass('menuhover');
   });
@@ -116,6 +150,41 @@ allEntries.fetch().done(function(){
     }).done( function () {
     contactToDelete.fadeOut();
     });
+  });
+
+
+
+  // Edit button function
+
+  $('.entry').on('click', '.fa-pencil', function(e){
+
+    e.preventDefault();
+
+    $(this).parent().parent().addClass('editingInfo');
+
+    $(document).find('#submitBtn').addClass('editingBtn');
+
+    $(document).find('#editBtn').addClass('addEdit');
+
+
+    idToEdit = $(this).parent().parent().attr('id');
+    var contactToEdit = $(this).parent().parent();
+
+    var editURL = url + idToEdit;
+
+    $.getJSON(editURL, function(contact){
+      $('#firstName').val(contact.firstName);
+      $('#lastName').val(contact.lastName);
+      $('#email').val(contact.email);
+      $('#pNumber').val(contact.phoneNumber);
+      $('#twitter').val(contact.twitter);
+      $('#linkedIn').val(contact.linkedIn);
+    });
+
+    // Submit Changes Button Listener
+
+    $('#addEntry').on('click', '#editBtn', editEntry);
+
   });
 });
 

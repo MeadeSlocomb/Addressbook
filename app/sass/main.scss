@@ -6,7 +6,7 @@
 
 
 body {
-  background-color: #BDD9FD;
+  background-color: #f7f7f7;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   margin: 30px auto;
   padding: 15px 0;
   color: #005E7F;
-  background-color: #C7EBFF;
+  background-color: #fff;
   border: 1px solid #00527F;
   border-radius: 5px;
   text-align: center;
@@ -44,12 +44,19 @@ body {
   width: 150px;
 }
 
+.editBtn {
+  margin-top: 10px;
+  height: 30px;
+  width: 150px;
+  visibility: hidden;
+}
+
 
 // Address book entry styling
 
 .entry {
   list-style-type: none;
-  background-color: #C7EBFF;
+  background-color: #fff;
   color: #005E7F;
   border: 1px solid #00527F;
   border-radius: 5px;
@@ -85,8 +92,12 @@ body {
 }
 
 
+/////////////////////
+// Entry option menu//
+//////////////////////
 
-// Entry option menu
+
+  //Menu drop down on hover
 
 .fa-cog {
   color: #005E7F;
@@ -136,7 +147,22 @@ body {
 
 .options:hover {
   border: 1px solid #00527F;
-
 }
+
+
+// Highlights contact being edited
+
+.editingInfo {
+  background-color: #FDD6D6;
+}
+
+.editingBtn {
+  visibility: hidden;
+}
+
+.addEdit {
+  visibility: visible;
+}
+
 
 

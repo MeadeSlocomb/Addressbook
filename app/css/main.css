@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #BDD9FD; }
+  background-color: #f7f7f7; }
 
 .container {
   text-align: center;
@@ -13,7 +13,7 @@ body {
   margin: 30px auto;
   padding: 15px 0;
   color: #005E7F;
-  background-color: #C7EBFF;
+  background-color: #fff;
   border: 1px solid #00527F;
   border-radius: 5px;
   text-align: center; }
@@ -32,9 +32,15 @@ body {
   height: 30px;
   width: 150px; }
 
+.editBtn {
+  margin-top: 10px;
+  height: 30px;
+  width: 150px;
+  visibility: hidden; }
+
 .entry {
   list-style-type: none;
-  background-color: #C7EBFF;
+  background-color: #fff;
   color: #005E7F;
   border: 1px solid #00527F;
   border-radius: 5px;
@@ -104,3 +110,12 @@ body {
 
 .options:hover {
   border: 1px solid #00527F; }
+
+.editingInfo {
+  background-color: #FDD6D6; }
+
+.editingBtn {
+  visibility: hidden; }
+
+.addEdit {
+  visibility: visible; }
