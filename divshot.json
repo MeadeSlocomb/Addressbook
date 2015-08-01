@@ -1,0 +1,6 @@
+{
+  "name": "meade-tiy-contactlistapp",
+  "root": "app",
+  "clean_urls": true,
+  "error_page": "y"
+}
