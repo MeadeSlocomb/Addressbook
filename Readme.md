@@ -4,10 +4,10 @@ This was my first project built using the Backbone.js.  The app takes basic info
 
 This app uses:
 
->Backbone.js
->JQuery
->Underscore.js
->Handlebars.js
->Font-awesome for icons
+>Backbone.js </br>
+>JQuery </br>
+>Underscore.js </br>
+>Handlebars.js </br>
+>Font-awesome for icons </br>
 
 The deployed project is visible here: http://development.meade-tiy-contactlistapp.divshot.io/
